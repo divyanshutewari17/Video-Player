@@ -1,21 +1,24 @@
+import React,{useState,useEffect} from 'react';
+import { View, StyleSheet, Button, TouchableOpacity , Text, ScrollView } from 'react-native';
+import { Video, AVPlaybackStatus } from 'expo-av';
+import * as ImagePicker from 'expo-image-picker';
+import VideoPlayer from './components/video'
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ScrollView style={styles.container}>
+      <VideoPlayer />
+      <VideoPlayer />
+      <VideoPlayer />
+      <StatusBar style='dark'/>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    marginTop:30,
+    backgroundColor: '#ecf0f1',
+  }
 });
